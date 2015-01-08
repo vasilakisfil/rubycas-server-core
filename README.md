@@ -1,6 +1,7 @@
 rubycas-server-core
 ===================
 [![Circle CI](https://circleci.com/gh/vasilakisfil/rubycas-server-core.svg?style=svg)](https://circleci.com/gh/vasilakisfil/rubycas-server-core)
+
 The core logic for handling CAS requests independent of any particular storage or web presentation technology.
 
 
