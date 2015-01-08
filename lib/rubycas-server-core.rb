@@ -6,8 +6,8 @@ require "rubycas-server-core/authenticator"
 require "rubycas-server-core/settings"
 require "rubycas-server-core/database"
 require "rubycas-server-core/util"
-require "rubycas-server-core/tickets"
 require "rubycas-server-core/tickets/validations"
+require "rubycas-server-core/tickets"
 
 module RubyCAS
   def self.root
