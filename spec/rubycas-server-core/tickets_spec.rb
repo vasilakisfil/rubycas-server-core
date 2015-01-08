@@ -80,7 +80,7 @@ module RubyCAS::Server::Core
       end
 
       it "must generate a ticket that starts with 'ST-'" do
-        st.ticket.should match /^ST-/
+        st.ticket.should(match(/^ST-/))
       end
 
       it "should assoicate the ST with the supplied TGT" do
@@ -90,15 +90,15 @@ module RubyCAS::Server::Core
 
     describe ".generate_proxy_ticket(target_service, pgt)" do
       it "should return a ProxyGrantingTicket" do
-        pending("Proxy ticket is not implemented yet")
+        skip('Not supported')
       end
 
       it "should not consume the generated ticket" do
-        pending("Proxy ticket is not implemented yet")
+        skip('Not supported')
       end
 
       it "should start the ticket string with PT-" do
-        pending("Proxy ticket is not implemented yet")
+        skip('Not supported')
       end
     end
   end

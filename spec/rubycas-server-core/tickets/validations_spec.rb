@@ -22,7 +22,7 @@ describe RubyCAS::Server::Core::Tickets::Validations do
         it "should validate login ticket" do
           @lt = Tickets.generate_login_ticket(@client_hostname)
           success, error = @cas.validate_login_ticket(@lt.ticket)
-          success.should be_true
+          success.should be_truthy
           error.should be_nil
         end
       end
@@ -88,7 +88,7 @@ describe RubyCAS::Server::Core::Tickets::Validations do
         end
 
         it "does not validate service ticket (throws an error)" do
-          success, error = @cas.validate_service_ticket(@service, "#{@st.ticket}-random_string")
+          _, error = @cas.validate_service_ticket(@service, "#{@st.ticket}-random_string")
           expect(error).not_to be nil
         end
       end

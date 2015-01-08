@@ -12,8 +12,10 @@ module RubyCAS
         attr_reader :_settings
 
         def load!(config)
+          
           if config.is_a? String
-            config = YAML::load_file(config).with_indifferent_access
+            config_dir = File.join RubyCAS.root, config
+            @_settings.merge! YAML::load_file(config_dir).with_indifferent_access
           elsif config.is_a? Hash
             @_settings.merge!(config)
           end

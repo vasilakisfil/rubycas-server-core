@@ -10,6 +10,10 @@ require "rubycas-server-core/tickets"
 require "rubycas-server-core/tickets/validations"
 
 module RubyCAS
+  def self.root
+    File.dirname __dir__
+  end
+
   module Server
     module Core
       extend self
