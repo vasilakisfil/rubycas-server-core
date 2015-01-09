@@ -24,6 +24,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', '>= 3.0'
 
   gem.add_development_dependency 'rspec', '~> 3.1.0'
-  gem.add_development_dependency 'rake', '~> 10.4.2'
-  gem.add_development_dependency 'bundler', '>= 1.6.0'
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'bundler'
+  gem.add_development_dependency 'pry'
+  gem.add_development_dependency 'rubycas-server-memory', '0.0.2'
 end
