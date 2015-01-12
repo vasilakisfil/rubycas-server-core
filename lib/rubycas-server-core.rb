@@ -6,6 +6,7 @@ require "rubycas-server-core/authenticator"
 require "rubycas-server-core/settings"
 require "rubycas-server-core/database"
 require "rubycas-server-core/util"
+require "rubycas-server-core/tickets/generations"
 require "rubycas-server-core/tickets/validations"
 require "rubycas-server-core/tickets"
 
