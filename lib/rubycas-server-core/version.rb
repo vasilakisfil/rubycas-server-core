@@ -5,10 +5,9 @@ module RubyCAS
 
         MAJOR = 0
         MINOR = 2
-        PATCH = 0
-        TAG = 'alpha'
+        PATCH = 1
 
-        STRING = [MAJOR, MINOR, PATCH, TAG].join('.')
+        STRING = [MAJOR, MINOR, PATCH].join('.')
       end
     end
   end
