@@ -14,5 +14,11 @@ module RubyCAS::Server::Core
         message
       end
     end
+
+    class RubyCASServerCoreError < StandardError
+    end
+
+    class RecordNotFound < RubyCASServerCoreError
+    end
   end
 end
