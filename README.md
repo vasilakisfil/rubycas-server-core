@@ -1,6 +1,6 @@
 rubycas-server-core
 ===================
-[![Circle CI](https://circleci.com/gh/vasilakisfil/rubycas-server-core.svg?style=svg)](https://circleci.com/gh/vasilakisfil/rubycas-server-core)
+[![Circle CI](https://circleci.com/gh/kollegorna/rubycas-server-core.svg?style=svg)](https://circleci.com/gh/kollegorna/rubycas-server-core)
 
 The core logic for handling CAS requests independent of any particular storage or web presentation technology.
 
@@ -20,22 +20,22 @@ If you want to create a new adapter check these 2 adapters how they are implemen
 class XXXTicket
   def initialize(options = {})
   end
-  
+
   #deprecated
   def self.find_by_ticket(ticket)
     #returns the ticket based on the ticket id
     #it will be removed soon
   end
-  
+
   def self.find_by(opts = {})
     #returns the ticket based on the constraints in the hash (activerecord-style)
   end
-  
+
   def save!
     #saves the ticket in the storage
     #throws an exception in case of an error
   end
-  
+
   def save
     #saves the ticket in the storage
   end
