@@ -1,4 +1,5 @@
 require "rubycas-server-core/error"
+require 'uri'
 
 module RubyCAS::Server::Core::Tickets
   module Validations
@@ -78,7 +79,7 @@ module RubyCAS::Server::Core::Tickets
         elsif st.expired?(RubyCAS::Server::Core::Settings.maximum_unused_service_ticket_lifetime)
           error = Error.new(:INVALID_TICKET, "Ticket '#{ticket}' has expired.")
           $LOG.warn "Ticket '#{ticket}' has expired."
-        elsif st.service != service
+        elsif URI(st.service).host != URI(service).host
           error = Error.new(:INVALID_SERVICE, "The ticket '#{ticket}' belonging to user '#{st.username}' is valid,"+
             " but the requested service '#{service}' does not match the service '#{st.service}' associated with this ticket.")
           $LOG.warn "#{error.code} - #{error.message}"
